@@ -16,4 +16,4 @@ alias la='ls -a'
 alias ll='ls -la'
 
 alias sampleSourcesBuilder='/home/jaminb/v2/temp/minh/scripts/sampleSourcesBuilder/sampleSourcesBuilder.py'
-alias builder-clean='/home/jaminb/v2/temp/minh/scripts/builder-clean/builder-clean "$@"' # removes the builder ... "stuff" from the xml 
+alias builder-clean='/home/jaminb/v2/temp/minh/scripts/builder-clean/builder-clean "$@"' # removes the builder ... "stuff" from the survey.xml 

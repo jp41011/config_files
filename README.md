@@ -1,4 +1,6 @@
-.rc_files
+Config files
 =========
-adfasdfadfa
-.rc files
+Files like:
+.vimrc
+.vim (folder)
+.bashrc

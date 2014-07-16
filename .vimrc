@@ -1,7 +1,7 @@
 let g:mapleader = ","
 filetype plugin on
 
-""""""""""""""""""""""""""""""" Juan's Stuff """"""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""" Juan's Stuff '"""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -11,46 +11,53 @@ set history=750			" number of lines to remember
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Theme/Colors
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-syntax on				" syntax highlighting on
+syntax on			          	   " syntax highlighting on
+highlight Search ctermbg=6   " ctermbg=3 (yellow) " highlight color
+"highlight Search ctermfg=yellow " font color - highlighted word
+"highlight Search cterm=underline " underlines the highlighted word
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vim UI
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set title				" show filename in title bar
-set scrolloff=4			" scroll screen when 4 lines form the bottom/top
-set ruler				" show cursor coordinates at bottom
-set number				" show line numbers
+set title			      	" show filename in title bar
+set scrolloff=4		  	" scroll screen when 4 lines form the bottom/top
+set ruler			      	" show cursor coordinates at bottom
+set number			    	" show line numbers
 set ttymouse=xterm2		" allow mouse to move cursor around
-set mouse=a 			" allow mouse to interact with vim
-set ww+=<,>h,l			" left and right arrow words properly
-"set noerrorbells		" don't make noise
+set mouse=a 		    	" allow mouse to interact with vim
+set ww+=<,>h,l		  	" left and right arrow words properly
+"set noerrorbells	   	" don't make noise
+"set cursorline       " underline current cursor line
+set laststatus=2      " enable status line always
+autocmd InsertEnter * hi StatusLine term=reverse ctermfg=2 ctermbg=7
+autocmd InsertLeave * hi StatusLine term=reverse ctermfg=15 ctermbg=0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Visual Cues
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set ignorecase			" ignore case when searching
-set incsearch			" incremental search
-set hlsearch			" highlight when searching
+set ignorecase	  	" ignore case when searching
+set incsearch		  	" incremental search
+set hlsearch		  	" highlight when searching
 						" :nohl to clear highlighted text after search
-set showmatch			" shows matching brackets
-set mat=10				" 10ths of seconds to blink matching brackets
+set showmatch		  	" shows matching brackets
+set mat=10			  	" 10ths of seconds to blink matching brackets
 set novisualbell		" don't blink
 set laststatus=2		" always show status line
-"set cursorline			" highlight current cursor line
+"set cursorline		  	" highlight current cursor line
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Text Formatting/Layout
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set tabstop=4			" tab spacing (settings below to unify it)
-set softtabstop=4		" unify
-set shiftwidth=4		" unify
+set tabstop=2		  	" tab spacing (settings below to unify it)
+set softtabstop=2		" unify
+set shiftwidth=2		" unify
 set autoindent			" indent based on previous line
-set noexpandtab			" does not expand tab to real spaces
-set wrap				" wraps lines
-set nopaste				" nopaste when using code snippets
-"set expandtab			" convert tabs to real spaces!
-"set smarttab			" uses tabs @ start of lines and spaces elsewhere
-"set paste 				" better pasting with paste mode, breaks snipMate
+"set noexpandtab			" does not expand tab to real spaces
+set wrap			  	  " wraps lines
+set nopaste			  	" nopaste when using code snippets
+set expandtab		   	" convert tabs to real spaces!
+"set smarttab		  	" uses tabs @ start of lines and spaces elsewhere
+"set paste 			  	" better pasting with paste mode, breaks snipMate
 "set nomagic
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

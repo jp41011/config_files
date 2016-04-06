@@ -1,0 +1,82 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" General									
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nocompatible				" get out of vi compatible mode
+filetype on					" detect the type of file
+set history=750					" The number of lines to remember
+"set cf						" enables error files and error jumping
+"filetype plugin on				" loads filetype plugins
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Theme/Colors									
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+syntax on					" syntax highlighting on
+highlight Search ctermbg=6   " ctermbg=3 (yellow) " highlight color
+"highlight Search ctermfg=yellow " font color - highlighted word
+"highlight Search cterm=underline " underlines the highlighted word
+
+"Sets status line to green when in insert mode
+autocmd InsertEnter * hi StatusLine term=reverse ctermfg=2 ctermbg=7
+autocmd InsertLeave * hi StatusLine term=reverse ctermfg=15 ctermbg=0
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Files/Backups									
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set backup 					" make backup file
+set backupdir=~/.vim/backup		" backup file directory
+set directory=~/.vim/tmp		" directory for temp files
+set makeef=error.err				" file to dump make output to
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Vim UI									
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set title			      	" show filename in title bar
+set laststatus=2				" always show status line
+set paste 			  	" better pasting with paste mode, breaks snipMate
+
+set ttymouse=xterm2		" allow mouse to move cursor around
+set mouse=a 		    	" allow mouse to interact with vim
+set ww+=<,>h,l,[,]	 	" left and right arrow words properly
+
+set scrolloff=3		  	" scroll screen when 3 lines form the bottom/top
+set number			    	" show line numbers
+set ruler			      	" show cursor coordinates at bottom
+
+set wildmenu					" turns on wild menu
+set showmatch					" shows matching brackets
+set mat=5					" 10ths of second to blink matching brackets
+set backspace=2					" makes backspace work normally
+
+set ignorecase	  	" ignore case when searching
+set incsearch					" highlight as searched phrase is typed
+set hlsearch		  	" highlight when searching
+"set cursorline		  	" highlight current cursor line
+
+set tabstop=2		  	" tab spacing (settings below to unify it)
+set softtabstop=2		" unify
+set shiftwidth=2		" unify
+set noexpandtab			" does not expand tab to real spaces
+set wrap			  	  " wraps lines
+set autoindent			" indent based on previous line
+
+set novisualbell				" don't blink
+set noerrorbells				" doesn't make noise
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" VIM diff highlight colors
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+if &diff
+  colorscheme juanDiffTheme 
+endif
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" screen title - show file name in screen tab name
+"if &term == "screen"
+"  let &titlestring = "vim(" . expand("%:t") . ")"
+"  set t_ts=k
+"  set t_fs=\
+"  set title
+"endif
+"autocmd TabEnter,WinEnter,BufReadPost,FileReadPost,BufNewFile * let &titlestring = 'vim(' . expand("%:t") . ')'
+

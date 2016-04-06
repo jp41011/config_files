@@ -1,0 +1,54 @@
+# Updated 8/19/15 - Juan#
+
+#basic stuff
+vbell off
+startup_message off
+defscrollback 2000
+msgwait 1.5
+hardstatus on
+hardstatus alwayslastline
+#Jeremy's cool color stuff. You can mess with the 'bW' and 'rW' to change (case sensitive). 1st letter =  background color, 2nd letter = font color
+hardstatus string "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{..Y} %m/%d %C%a " 
+altscreen on
+#shelltitle "$ |" #controls the title of the screen tab, also need something in .vimrc for this to work properly.
+
+#Juan's Stuff
+#F7='k7', F8='k8' , F9='k9', F10='k;'
+bindkey -k k7 prev      #F7 = go to previous screen
+bindkey -k k8 next      #F8 = go to next screen
+#bindkey -k k9 screen   #F9 = new screen
+bindkey -k k9 screen 1  #F9 = new screen (and starts at 1 instead of 0)
+bindkey -k k; kill      #F10 = kill current screen
+bindkey -k F2 detach    #F12 = detach screen session ... idk why F12 is called F2 ... it hurts my eyes.
+
+#Vim in insert mode press ctr+v then press key combination
+
+# Windows key codes
+bindkey [D prev #ctrl + <- = previous screen
+bindkey [C next #ctrl + -> = next screen
+#Same as ubuntu key codes: new screen, kill screen, detach
+
+#Ubuntu key codes
+bindkey [1;5D  prev #ctrl + left arrow
+bindkey [1;5C  next #ctrl + right arrow
+bindkey  screen 1 #ctrl+c = create new screen
+bindkey  kill #ctrl+k = kill screen
+bindkey  detach #ctrl+d = detach from screens and leave them running
+
+#Mac key codes
+bindkey b  prev #option + left arrow
+bindkey f  next #option + right arrow
+bindkey ç screen 1 #option + c = new screen
+bindkey ˚ kill #option + k = kill screen
+bindkey ∂ detach #option + d = detach from screens and leave them running
+
+#window numbering starts at 1 not 0...because it should match the keyboard layout!!
+bind c screen 1 
+bind ^c screen 1
+bind 0 select 10 #ctrl+a, 0 will select screen number 10
+screen 1
+
+#If you are weird and want screens numbers to start from 0 instead of 1.
+#Comment out:
+# block: starting with "bind c screen 1"
+# line: "bindkey -k k9 screen 1" and replace with "bindkey -k k9 screen"

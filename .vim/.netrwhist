@@ -1,8 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/jaminb/v2/data/go'
-let g:netrw_dirhist_2='/home/jaminb/alpha/v2-dev/temp/minh/m17/lib/bcvideo/v1'
-let g:netrw_dirhist_3='/home/jaminb/alpha/v2-dev/lib/steam/slidernumber/v1'
-let g:netrw_dirhist_4='/home/jaminb/alpha/v2-dev/lib/steam/bcme/v1'
-let g:netrw_dirhist_5='/home/minh/xmlsnippets/.vim/plugin'
-let g:netrw_dirhist_6='/home/jaminb/v2/selfserve/14da/140691/temp-061314'
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/jaminb/v2/temp/jvaldeabella/dev/numberTable'
+let g:netrw_dirhist_2='/home/jaminb/v2/selfserve/9d0/hap14004'
+let g:netrw_dirhist_3='/home/jaminb/v2/selfserve/9d0/hap14008'
+let g:netrw_dirhist_4='/home/jpedraza'
+let g:netrw_dirhist_5='/var/www/html'
